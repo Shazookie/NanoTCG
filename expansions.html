@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expansions | Nano's Ascension</title>
+  <meta name="description" content="Browse, search, and filter every card in the Nano's Ascension TCG.">
+  <link rel="icon" type="image/png" href="media/images/NanoLogoTCG.png">
+  <link rel="apple-touch-icon" href="media/images/NanoLogoTCG.png">
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body class="page-expansions">
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="media/images/NanoLogoTCG.png" alt="" aria-hidden="true">
+      <span class="brand-text">Nano's Ascension</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="expansions.html" class="active">Expansions</a>
+      <a href="battle.html">Battle</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="header-actions">
+      <span class="collection-badge" title="Cards collected">
+        Pulls <strong class="collection-count">0</strong>
+        <span aria-hidden="true">&middot;</span>
+        Unique <strong class="unique-count">0</strong>
+      </span>
+      <button class="btn btn-mini" data-action="open-pack" aria-label="Open a card pack">Open Pack</button>
+      <button class="theme-toggle" aria-label="Toggle theme" aria-pressed="false">
+        <span class="theme-icon-dark">Light</span>
+        <span class="theme-icon-light">Dark</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+    <h1 class="page-title">Expansions</h1>
+    <p class="section-subtitle">Search, filter, and flip every card in the set.</p>
+
+    <section class="filter-bar" aria-label="Search and filter">
+      <div class="field">
+        <label for="search-input">Search</label>
+        <input id="search-input" type="search" placeholder="Name, flavor, rules…">
+      </div>
+      <div class="field">
+        <label for="filter-type">Type</label>
+        <select id="filter-type"><option value="">All types</option></select>
+      </div>
+      <div class="field">
+        <label for="filter-rarity">Rarity</label>
+        <select id="filter-rarity"><option value="">All rarities</option></select>
+      </div>
+      <div class="field">
+        <label for="filter-expansion">Expansion</label>
+        <select id="filter-expansion"><option value="">All expansions</option></select>
+      </div>
+      <div class="field">
+        <label>Treat cost</label>
+        <div class="field-row">
+          <input id="filter-min-cost" type="number" min="0" placeholder="Min">
+          <input id="filter-max-cost" type="number" min="0" placeholder="Max">
+        </div>
+      </div>
+      <div class="field">
+        <label>Min ATK / DEF</label>
+        <div class="field-row">
+          <input id="filter-min-atk" type="number" min="0" placeholder="ATK">
+          <input id="filter-min-def" type="number" min="0" placeholder="DEF">
+        </div>
+      </div>
+      <div class="field">
+        <label for="sort-by">Sort by</label>
+        <select id="sort-by">
+          <option value="name">Name</option>
+          <option value="cost">Treat cost</option>
+          <option value="attack">Attack</option>
+          <option value="defense">Defense</option>
+          <option value="rarity">Rarity</option>
+        </select>
+      </div>
+      <div class="field field-checkbox">
+        <input id="filter-owned-only" type="checkbox">
+        <label for="filter-owned-only">Owned only</label>
+      </div>
+      <div class="field filter-actions">
+        <button id="reset-filters" class="btn btn-mini" type="button">Reset</button>
+        <button id="expansion-pack-btn" class="btn btn-mini" type="button">Open Random Pack</button>
+        <span class="result-count"><strong id="result-count">0</strong> cards</span>
+      </div>
+    </section>
+
+    <section id="card-grid" class="card-grid" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Nano's Ascension &mdash; a tribute to Nano the Seelyham Terrier.</p>
+  </footer>
+
+  <script src="JS/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battle Decks | Nano's Ascension</title>
+  <meta name="description" content="Build and save battle decks for Nano's Ascension TCG.">
+  <link rel="icon" type="image/png" href="media/images/NanoLogoTCG.png">
+  <link rel="apple-touch-icon" href="media/images/NanoLogoTCG.png">
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body class="page-battle">
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="media/images/NanoLogoTCG.png" alt="" aria-hidden="true">
+      <span class="brand-text">Nano's Ascension</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="expansions.html">Expansions</a>
+      <a href="battle.html" class="active">Battle</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="header-actions">
+      <span class="collection-badge" title="Cards collected">
+        Pulls <strong class="collection-count">0</strong>
+        <span aria-hidden="true">&middot;</span>
+        Unique <strong class="unique-count">0</strong>
+      </span>
+      <button class="btn btn-mini" data-action="open-pack" aria-label="Open a card pack">Open Pack</button>
+      <button class="theme-toggle" aria-label="Toggle theme" aria-pressed="false">
+        <span class="theme-icon-dark">Light</span>
+        <span class="theme-icon-light">Dark</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+    <h1 class="page-title">Battle Decks</h1>
+    <p class="section-subtitle">Build decks from cards you've actually pulled. Each variant counts as its own stack.</p>
+
+    <div id="deck-builder" class="deck-builder">
+      <aside class="panel">
+        <h2>Your Decks</h2>
+        <div class="deck-toolbar">
+          <button id="new-deck" class="btn btn-mini" type="button">New</button>
+        </div>
+        <ul id="decks-list" class="deck-list"></ul>
+      </aside>
+
+      <section class="panel">
+        <h2>Active Deck</h2>
+        <div class="deck-toolbar">
+          <input id="deck-name" type="text" placeholder="Deck name" aria-label="Deck name">
+          <button id="save-deck" class="btn btn-mini" type="button">Save Deck</button>
+          <button id="delete-deck" class="btn btn-mini" type="button">Delete</button>
+        </div>
+        <div id="deck-stats" aria-live="polite"></div>
+        <div id="deck-cards"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Your Collection</h2>
+        <p class="muted">Click <strong>+</strong> on any card to add it to your deck. Each pulled variant tracks separately.</p>
+        <div class="browse-controls">
+          <input id="browse-search" type="search" placeholder="Search by name, role, variant…">
+          <select id="browse-type"><option value="">All types</option></select>
+        </div>
+        <div id="collection-empty" class="collection-empty" style="display:none;">
+          <p>You haven't pulled any cards yet.</p>
+          <button class="btn btn-primary" data-action="open-pack" type="button">Open Your First Pack</button>
+        </div>
+        <div id="collection-cards"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Nano's Ascension &mdash; a tribute to Nano the Seelyham Terrier.</p>
+  </footer>
+
+  <script src="JS/script.js" defer></script>
+</body>
+</html>

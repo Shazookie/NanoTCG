@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nano's Ascension | The Trading Card Game</title>
+  <meta name="description" content="Nano's Ascension &mdash; the trading card game of Nano the Seelyham Terrier. Collect, build, and battle.">
+  <link rel="icon" type="image/png" href="media/images/NanoLogoTCG.png">
+  <link rel="apple-touch-icon" href="media/images/NanoLogoTCG.png">
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body class="page-home">
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="media/images/NanoLogoTCG.png" alt="" aria-hidden="true">
+      <span class="brand-text">Nano's Ascension</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html" class="active">Home</a>
+      <a href="expansions.html">Expansions</a>
+      <a href="battle.html">Battle</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="header-actions">
+      <span class="collection-badge" title="Cards collected">
+        Pulls <strong class="collection-count">0</strong>
+        <span aria-hidden="true">&middot;</span>
+        Unique <strong class="unique-count">0</strong>
+      </span>
+      <button class="btn btn-mini" data-action="open-pack" aria-label="Open a card pack">Open Pack</button>
+      <button class="theme-toggle" aria-label="Toggle theme" aria-pressed="false">
+        <span class="theme-icon-dark">Light</span>
+        <span class="theme-icon-light">Dark</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 class="hero-title">Nano's Ascension</h1>
+      <p class="hero-subtitle">The Trading Card Game of the Greatest Dog Ever</p>
+      <p class="hero-text">
+        Collect cards across every expansion. Build decks that match your strategy.
+        Step into the arena and write your chapter of the Nano legend.
+      </p>
+      <div class="hero-cta">
+        <button class="btn btn-primary" data-action="open-pack">Open a Pack</button>
+        <a href="expansions.html" class="btn btn-secondary">Browse Expansions</a>
+      </div>
+    </section>
+
+    <section class="home-showcase" aria-label="Your favorite card">
+      <h2 class="section-title">Your Featured Pull</h2>
+      <p class="section-subtitle">Set any card as your favorite from the Expansions page.</p>
+      <div id="favorite-card" class="favorite-slot">
+        <p class="muted">Loading…</p>
+      </div>
+    </section>
+
+    <section class="home-showcase" aria-label="Recent pulls">
+      <h2 class="section-title">Your Recent Pulls</h2>
+      <p class="section-subtitle">The latest cards added to your collection.</p>
+      <div id="recent-pulls" class="featured-strip"></div>
+      <div id="recent-empty" class="empty-cta" style="display:none;">
+        <p class="muted">You haven't opened a pack yet.</p>
+        <button class="btn btn-primary" data-action="open-pack" type="button">Open Your First Pack</button>
+      </div>
+    </section>
+
+    <section class="features" aria-label="What you can do">
+      <article class="feature-card">
+        <h2>Collect</h2>
+        <p>Discover every card across every expansion and chase the rarest pulls in the Nano universe.</p>
+      </article>
+      <article class="feature-card">
+        <h2>Build</h2>
+        <p>Craft decks that match your style. Balance attack, defense, and treat cost to outsmart any opponent.</p>
+      </article>
+      <article class="feature-card">
+        <h2>Battle</h2>
+        <p>Test your deck in the arena and pit your favorite Nano cards against the wild and the worthy.</p>
+      </article>
+      <article class="feature-card">
+        <h2>Explore</h2>
+        <p>Dive into the lore. Every card carries a piece of Nano's legend, waiting to be uncovered.</p>
+      </article>
+    </section>
+
+    <section class="cta-banner">
+      <h2>Begin Your Ascension</h2>
+      <p>The pack awaits. The greatest dog ever has stories to tell, battles to win, and cards to be drawn.</p>
+      <button class="btn btn-primary" data-action="open-pack">Open Your First Pack</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Nano's Ascension &mdash; a tribute to Nano the Seelyham Terrier.</p>
+  </footer>
+
+  <script src="JS/script.js" defer></script>
+</body>
+</html>
